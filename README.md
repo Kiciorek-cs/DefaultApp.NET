@@ -15,7 +15,7 @@ The application includes a wide range of functionalities that make it a complete
 - custom authorization and authentication (account with confirmation, reset password e.t.c)
 - logging information from the entire system (Serilog, file, request tracking)
 - two databases
-- generic paging (country/pagination) e.g. ./api/v1/County/pagination?WhereColumns[0].Column=englishName&WhereColumns[0].Value=Kosovo&WhereColumns[0].Expression=10&PageSize=15&Page=1
+- generic paging with EnityFramework (country/pagination) e.g. ./api/v1/County/pagination?WhereColumns[0].Column=englishName&WhereColumns[0].Value=Kosovo&WhereColumns[0].Expression=10&PageSize=15&Page=1
 - sending emails
 - sending http requests
 - entityFramework + dapper
