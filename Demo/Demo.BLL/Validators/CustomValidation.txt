@@ -1,0 +1,15 @@
+﻿.Custom((x, context) => _materialReceiptCommandValidator.CheckContractorVatType(x.ContractorCode, x.MaterialReceiptDetails, context));
+
+public bool CheckContractorVatType(string contractorCode, List<MaterialReceiptDetailsCommand> materialReceiptDetails, CustomContext context)
+{
+    var contractor = _optimaRepository.GetContractor(contractorCode).Result;
+
+    if (contractor.TypeOfVat != 0 && materialReceiptDetails.Any(x => x.VAT != 0))
+    {
+        context.AddFailure(
+            $"W dokumencie znajdują się materiały które mają określony vat, jednak kontrahent musi mieć vat ustawiony na 0");
+        return false;
+    }
+
+    return true;
+}

@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Configurations>Debug;Release;Development</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Features\EmployeeAccess\**" />
+    <Compile Remove="Features\UserAccess\**" />
+    <Compile Remove="Validators\EmployeeAccess\**" />
+    <Compile Remove="Validators\UserAccess\**" />
+    <EmbeddedResource Remove="Features\EmployeeAccess\**" />
+    <EmbeddedResource Remove="Features\UserAccess\**" />
+    <EmbeddedResource Remove="Validators\EmployeeAccess\**" />
+    <EmbeddedResource Remove="Validators\UserAccess\**" />
+    <None Remove="Features\EmployeeAccess\**" />
+    <None Remove="Features\UserAccess\**" />
+    <None Remove="Validators\EmployeeAccess\**" />
+    <None Remove="Validators\UserAccess\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Azure.Identity" Version="1.13.1" />
+    <PackageReference Include="ClosedXML" Version="0.104.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="MediatR.Contracts" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NModbus" Version="3.0.81" />
+    <PackageReference Include="Serilog" Version="4.2.0" />
+    <PackageReference Include="Sharp7" Version="1.1.84" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.Domain\Demo.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Auth\Queries\" />
+    <Folder Include="Features\Country\Commands\" />
+    <Folder Include="Features\Logs\Commands\" />
+    <Folder Include="Validators\Auth\Queries\" />
+    <Folder Include="Validators\BackgroundTask\Queries\" />
+    <Folder Include="Validators\Country\Commands\" />
+  </ItemGroup>
+
+</Project>

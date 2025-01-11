@@ -1,0 +1,21 @@
+Enable-Migrations -ContextTypeName PermissionContext -MigrationsDirectory "Persistence\Migrations\Permission"
+Enable-Migrations -ContextTypeName DemoContext -MigrationsDirectory "Persistence\Migrations\Demo"
+
+--ze zmianą lokalizacji
+add-migration Initial -Context DemoContext -OutputDir "Persistence\Migrations\Demo"
+add-migration Initial -Context PermissionContext -OutputDir "Persistence\Migrations\Permission"
+
+add-migration Initial -Context DemoContext
+add-migration Initial -Context PermissionContext
+
+remove-migration -Context DemoContext
+remove-migration -Context PermissionContext
+
+$env:ASPNETCORE_ENVIRONMENT = "Local"
+
+update-database -Context DemoContext -Args "-context DemoContext"
+update-database -Context PermissionContext -Args "-context PermissionContext"
+
+
+beck to first migration
+update-database -Migration 0 -Context DemoContext

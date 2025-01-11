@@ -1,0 +1,8 @@
+﻿"Usually is the one your DAL talk about, the way it have of 
+representing the entities of your data layer, is usually 
+separated from the rest so it allows you to give it some 
+properties, like Lazy loading (don't get from the database 
+certain heavy properties unless they are asked)"
+
+
+Database model

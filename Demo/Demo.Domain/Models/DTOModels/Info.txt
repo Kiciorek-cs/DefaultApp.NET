@@ -1,0 +1,8 @@
+﻿"Usually are light objects used to transfer between tiers/layers, 
+usually when you expect to go through the wire or cross other 
+boundaries so you try to minimize the information being send across"
+
+
+Return object
+
+https://stackoverflow.com/questions/1051182/what-is-a-data-transfer-object-dto
