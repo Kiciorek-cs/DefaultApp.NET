@@ -1,6 +1,6 @@
-# Monolithic Application in .NET 9
+# Application in .NET 9
 
-This repository contains a **monolithic application** built with **.NET 9**. It consolidates a variety of essential features and functionalities into a single cohesive application.
+This repository contains a **application** built with **.NET 9**. It consolidates a variety of essential features and functionalities into a single cohesive application.
 
 ## Key Features
 
